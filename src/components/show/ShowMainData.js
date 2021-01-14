@@ -14,7 +14,7 @@ const ShowMainData = ({ name, rating, summary, tags, image }) => {
               <span>{rating.average || 'N/A'}</span>
             </div>
           </Headline>
-          //imp 
+           
           <div className="summary" dangerouslySetInnerHTML={{ __html: summary }} />
           <div>
             Tags:{' '}

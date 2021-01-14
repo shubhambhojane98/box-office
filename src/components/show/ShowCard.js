@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import { StyledShowCard } from './ShowCard.styled';
 import { Star } from '../styled';
@@ -20,7 +20,7 @@ const ShowCard = ({ id, image, name, summary, onStarClick, isStarred }) => {
       <p>{summaryAsText}</p>
 
       <div className="btns">
-        <Link to={`/show/${id}`}>Read more</Link>
+        <NavLink to={`/show/${id}`}>Read more</NavLink>
         <button type="button" onClick={onStarClick}>
           <Star active={isStarred} />
         </button>

@@ -1,11 +1,10 @@
-import React from "react";
-import {Switch, Route} from 'react-router-dom';
-// import Navs from './components/Navs';
+import React from 'react';
+import { HashRouter as Switch, Route } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
+
 import Home from './pages/Home';
 import Starred from './pages/Starred';
-import Show from './pages/Show'
-import { ThemeProvider } from "styled-components";
-
+import Show from './pages/Show';
 
 const theme = {
   mainColors: {
@@ -15,35 +14,28 @@ const theme = {
   },
 };
 
-
-function App () {
+function App() {
   return (
-   
-    
- <ThemeProvider theme={theme}>
- <Switch>
-      <Route exact path="/">
-            <Home />
-      </Route>
-  
-      <Route exact path="/start">
-            <Starred />
-      </Route>
+    <ThemeProvider theme={theme}>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
 
-       <Route exact path="/show/:id">
-           <Show />
-       </Route>
+        <Route exact path="/starred">
+          <Starred />
+        </Route>
 
-      <Route>
-            <div>Not Found</div>
-      </Route>
-      
-    </Switch>
- </ThemeProvider>
-    
-    
+        <Route exact path="/show/:id">
+          <Show />
+        </Route>
+
+        <Route>
+          <div>Not found</div>
+        </Route>
+      </Switch>
+    </ThemeProvider>
   );
 }
-
 
 export default App;
