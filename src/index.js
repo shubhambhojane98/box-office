@@ -1,10 +1,14 @@
 
-// import serviceWorkerRegistration from './serviceWorkerRegistration'
+//  import serviceWorkerRegistration from './serviceWorkerRegistration'
 import React from "react";
 import ReactDOM from "react-dom";
 import {  HashRouter} from 'react-router-dom'
 import App from "./App";
 
-ReactDOM.render(<HashRouter basename={process.env.PUBLIC_URL}><App /></HashRouter>, document.getElementById("root"));
+ReactDOM.render(<HashRouter>
+    <App />
+    </HashRouter>, 
+    document.getElementById("root")
+    );
 
-// serviceWorkerRegistration.register();
+//  serviceWorkerRegistration.register();
