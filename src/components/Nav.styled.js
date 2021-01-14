@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {NavLink} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 export const NavList = styled.ul`
   display: flex;
@@ -9,7 +9,7 @@ export const NavList = styled.ul`
   padding: 0;
 `;
 
-export const LinkStyled = styled(NavLink)`
+export const LinkStyled = styled(Link)`
   margin: 0 10px;
   padding: 3px 15px;
   position: relative;
