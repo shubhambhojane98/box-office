@@ -6,7 +6,7 @@ import {useLocation} from 'react-router-dom'
 
 const LINK = [
     { to:'/', text:'Home'},
-    { to:'/start', text: 'Start'},
+    { to:'/starred', text: 'Starred'},
 ]
 
 const Navs = () => {
